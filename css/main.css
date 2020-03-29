@@ -1,0 +1,100 @@
+/* Main CSS used to import the specialized designs */
+
+
+@import url("topbar_design.css");
+@import url("sidebar_design.css");
+@import url("main_column_design.css");
+@import url("footer_design.css");
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/diagoth.ttf);
+}
+
+@font-face {
+    font-family: latinMonoRomanRegular;
+    src: url(../fonts/lmroman17-regular.otf);
+}
+
+@font-face {
+    font-family: latinMonoCaps;
+    src: url(../fonts/lmmonocaps10-regular.otf);
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+	width: 100%;
+	background-color: yellow;
+    }
+    .column.side {
+	height: auto;
+	position: static;
+    }
+}
+
+:root {
+    --sidebar-width: 200px;
+    --topbar-height: 44px;
+}
+
+/* Remove the small dotted line around the links when they are clicked */
+a {
+    outline: 0;
+}
+
+
+@media screen and (min-width: 1000px) {
+    :root {
+	--sidebar-width: 300px;
+	--topbar-height: 44px;
+    }
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #A1A1A1;
+    padding: 3px;
+    text-align: center;
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.topbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #cae8ca;
+    /*padding: 5px; */
+    /* NEMRÉG ÁTÍRVA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    border: 2px solid/* #888888;*/ #4CAF50;
+    height: var(--topbar-height);
+    font: font-family;
+    z-index: 10;
+    /* NEMRÉG HOZZÁADVA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    background-image: linear-gradient(#888888, white, #888888);
+    box-shadow: 0px 10px 8px 0px #535353; /*inset;*/
+}
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    padding: 10px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+

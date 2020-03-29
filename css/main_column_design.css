@@ -1,0 +1,156 @@
+/* Middle column */
+.column.middle {
+    overflow: auto;
+    flex-grow: 1;
+    background-color: white;/*#fff0a3;
+    /*width: calc(100% - var(--sidebar-width));*/
+    /*background-color: white;*/
+    /*background: url(../chatoic_text.png);
+    background-repeat: no-repeat;
+    background-size: cover; /**/
+    font-family: latinMonoRomanRegular;
+}
+
+.pageTitle {
+    color: black;
+/*    text-transform: uppercase;
+    /*font-family:  myFirstFont;*/
+    /*font-family:  latinMonoCaps;*/
+    font-family: latinMonoRomanRegular;
+    font-size: 50px;
+    /*border-style: solid;
+    border-color: #474747; */
+    text-align: center;
+   /* text-shadow:
+	0px 1px 0px #5e5e5e,
+        0px 2px 0px #5e5e5e,
+        0px 3px 0px #5e5e5e,
+        0px 4px 0px #5e5e5e,
+	1px 8px 4px rgba(16,16,16,0.7),
+	1px 14px 7px rgba(16,16,16,0.6),
+	1px 18px 12px rgba(16,16,16,0.7),
+	1px 22px 30px rgba(16,16,16,0.8); /**/
+
+}
+
+hr.mainPageHR {
+    border-style: outset;
+    border-color: black;
+    border-width: 2px;
+}
+
+.pathDisplayDiv {
+    font-size: 30px;
+    font-family: latinMonoCaps;
+    border-bottom: solid;
+    border-color: orange;
+    padding-bottom: 10px;
+}
+
+.pathDisplayDiv:focus {
+    outline: 0px solid transparent;
+}
+
+/****************************************************************************/
+/* Abstraction-level related divs */
+
+
+div.absContainer {
+    display: flex;
+    /* background-color: #2348FF; */
+}
+
+/* div to handle concepts on the same abstraction level */
+div.abstractionLevel {
+    flex: 1;
+    height: 50px;
+    overflow: hide;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    /*border-color: red;
+    border-style: solid;*/
+    /* Text transition: */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 2%, black 7%,
+					black 93%, rgba(0,0,0,0) 98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.movingAbsLevel {
+    flex: 1;
+    height: 50px;
+    white-space: nowrap;
+    position: relative;
+    white-space: nowrap;
+    /*border-color: blue;
+    border-style: solid;*/
+}
+
+.conceptButton {
+    color: black;
+    font-family: latinMonoRomanRegular; /**/
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    display: inline-block;
+
+    /* The buttons are often translated => the "drag" effect looks bad */
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.conceptButton:hover {
+    transform: scale(1.2);
+    text-shadow:
+	1px 3px 3px rgba(16,16,16,0.6),
+	1px 5px 6px rgba(16,16,16,0.7);
+}
+
+.conceptButton:active {
+    background-color: rgba(0,0,0,0);
+}
+
+.conceptArrow {
+    height: 30px;
+    width: 30px;
+    align-self: center;
+    transition: all .3s ease-in-out;
+}
+
+.conceptArrow.Right {
+    float: right;
+}
+
+.conceptArrow.Right:hover {
+    transform: scale(1.2);
+}
+
+.conceptArrow.Left {
+    -webkit-transform: scaleX(-1);
+    transform: scale(-1);
+    float: left;
+}
+
+.conceptArrow.Left:hover {
+    transform: scale(-1.2);
+}
+
+/* -------------------------------------------------------------------------*/
+/* Main Page Content -------------------------------------------------------*/
+
+.mainPageContent {
+    font-size: 25px;
+    /*border-style: solid;
+    border-color: red;    
+    
+    /**/		  	  
+}

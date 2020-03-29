@@ -1,0 +1,30 @@
+Starting server at port 15400
+127.0.0.1 - - [27/Mar/2020 00:57:40] "GET /?id=mathematics HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:41] "GET /?id=physics HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:41] "GET /?id=algebra HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:42] "GET /?id=mechanics HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:42] "GET /?id=eldyn HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:43] "GET /?id=discrete_maths HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:43] "GET /?id=analysis HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:44] "GET /?id=mathematics HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:44] "GET /?id=chemistry HTTP/1.1" 200 -
+Request for unknown ID: chemistry
+127.0.0.1 - - [27/Mar/2020 00:57:45] "GET /?id=biology HTTP/1.1" 200 -
+Request for unknown ID: biology
+127.0.0.1 - - [27/Mar/2020 00:57:45] "GET /?id=statphys HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:45] "GET /?id=analysis HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:46] "GET /?id=eldyn HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:47] "GET /?id=physics HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:47] "GET /?id=mathematics HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:48] "GET /?id=economics HTTP/1.1" 200 -
+Request for unknown ID: economics
+127.0.0.1 - - [27/Mar/2020 00:57:48] "GET /?id=analysis HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:49] "GET /?id=statphys HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:49] "GET /?id=politology HTTP/1.1" 200 -
+Request for unknown ID: politology
+127.0.0.1 - - [27/Mar/2020 00:57:50] "GET /?id=economics HTTP/1.1" 200 -
+Request for unknown ID: economics
+127.0.0.1 - - [27/Mar/2020 00:57:50] "GET /?id=discrete_maths HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:51] "GET /?id=mathematics HTTP/1.1" 200 -
+127.0.0.1 - - [27/Mar/2020 00:57:52] "GET /?id=physics HTTP/1.1" 200 -
+Server Shutdown...

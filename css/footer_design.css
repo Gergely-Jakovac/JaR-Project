@@ -1,0 +1,9 @@
+/* Style the footer */
+.footer {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    border-color: #474747;
+    border-style: solid;
+    border-radius: 20px;
+}

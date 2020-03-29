@@ -1,0 +1,4 @@
+> Put "justify-content: center;" to center horizontally. (flex display needed)
+> Padding extends the links to the outside in all directions, 
+  while margin extends the link only horizontally.
+> If the height of the link is set, "tex-align: center;" can center the text.

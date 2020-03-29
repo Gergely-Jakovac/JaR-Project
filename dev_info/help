@@ -1,0 +1,120 @@
+Debugging: > open the console: Ctrl + Shift + K
+	   > output to the console: console.log(...);
+
+Data types:> dynamic types
+     	   > x = null will make ti null, but the type will be "object"
+	   > x = undefined makes both type and value undefined
+	   > x == y checks whether the value is equal
+	   > x === y checks whether the type and value are both equal
+	   > ask for the type of a variable with typeof (ne parentheses)
+	     - typeof array = "object"
+
+Functions: > all functions can be handled as values: var x = myfunc is valid
+
+Objects:   > "new" keyword ensures that a variable with type "object" is created
+	   > comparing objects will ALWAYS return false
+	   
+Events:	   > common types:
+	     - onchange: An HTML element has been changed
+	     - onclick: The user clicks an HTML element
+	     - onmouseover: The user moves the mouse over an HTML element
+	     - onmouseout: The user moves the mouse away from an HTML element
+	     - onkeydown: The user pushes a keyboard key
+	     - onload: The browser has finished loading the page
+
+Strings:   > String methods DO NOT MODIFY the string (they return a new one)
+	   > [n] operator: returns the nth chracter
+	   > .length (no parentheses)
+	   > .indexOf("..") returns the first occurence of the string
+	   > .lastIndexOf("..") returns the last occurence
+	   > .search("..") can search for a regexp
+	   > .slice(a,b) returns the substring from index a to b
+	   > .substring(a,b) same as slice, but can not accept negative indeces
+	   > .substr(a, l) returns substring starting from a with length l
+	   > .replace(s1, s2) replaces the regexp s1 by s2
+	     - NOTE: it replaces only the first occurence if not told otherwise
+	     - see REGEXPs 
+	   > .trim() removes whitespaces from the end
+	   > .charAt(index) returns the caharcter at index
+	     - preferred against the [] operator
+	   > .charCodeAt(index) returns the code of the character
+	   > .split("str") splits the string into a list at the given strs
+
+Numbers:   > there is only ONE number type (64 bit)
+	   > "+" operator with two numbers adds them !!it concats to strings!!
+	   > Infinity is the largest possible number
+	     - division with 0 produces Infinity
+	   > .toFixed(n) converts to a string with at EXACTLY n decimals
+	   > .toLength(n) converts to string with n digits
+	   > parseInt(k) returns an int converted from a string k
+
+Arrays:    > array = object with numbered indexes
+	     - => type is object !!!
+	     - Array.isArray(object) checks whether the object is an array
+	       <= not supported in older browsers. Prefer: obj instatnceof Array
+	   > empty array: prefer var a = [] over var a = new Array();
+	   > operator [] accesses its elements
+	   > var arr = [1, 2, 3] => syntax
+	   > .length (no parentheses) returns the number of elements
+	   > .push(..): adds a new element
+	     - note that [arr.length] = x adds a new element too (DONT USE)
+	   > .pop(): stack-like pop
+	   > .shift(): removes the frist element and decreases index of others
+	     - returns the frist element
+	   > .unshift(str): adds an element at the beginning
+	   > .join(str): concats the elements as strings with "str" separator
+	   > delete arr[n] sets nth element TO UNDEFINED!
+	   > .splice(a, b, rest): removes b element from position "a", and
+	     		   	  then inserts the rest of the params at "a"
+	   > .concat(arr): concats self with arr. Returns a NEW ARRAY!!
+	   > .slice(n, e) returns a new array with elements ranging from n to e
+	   > .sort(): sorts the array: STRING SORT
+	     - to sorts elements as numbers: .sort(function(a, b){return b - a})
+	   > .reverse(): reverses the array
+	   SEE MORE IN ARRAY METHODS + ARRAY SORT 
+	   > .forEach(lambda) executes the lambda for each element
+	   > .map(lambda) creates a new array than applies lambda on it
+	     - lambda params: value, index, array
+	   > .filter(bool lambda): creates a new array with the filtered elems
+	   > .reduce(lambda): creates one value from the array (like summation)
+	     - lambda params: total, value, index, array
+	   > .reduceRight(lambda): same as reduce bu starting from the right
+	   > .every(lambda): checks if all elements statisfy the condition
+	   > .some(lambda): checks if any element statisfies the condition
+	   > .find(lambda): params: value, index, array. Returns value
+	   > .findIndex(lambda): same, but returns the index of the element
+
+Regular expressions:
+	   > Syntax: /patterns/modifiers
+	   > modifiers:
+	     - i: implie case insensitiveness
+	     - g: implies "global" (eg. global search)
+	     - m: multiline matching
+	   > patterns:
+	     - [abc] any of a, b, c
+	     - [0-9] any digit
+	     - (x | y) x or y
+	     - \d : digit
+	     - \s : space
+	     - \b : find a match at the beggining/end of word
+	     - n+ : string that contains at least one n
+	     - n* : string that contains 0 or more n
+	     - n? : string that contains 0 or 1 n
+	   > .test(string) : checks if there is a match in the string to self
+
+Errors SEE ERRORS TUTORIAL
+
+Date object: SEE ONLINE TUTORIAL
+
+Math module: contains mathematical functions. Call like: Math.sqrt(n)
+
+Random: Math.random() returns a random number in the interval [0, 1)
+		      Integers: Math.floor(Math.random() * N)
+
+STATEMENTS:
+	> if (cond) {} else if)(cond) else {}
+	> switch(expression) {case 1: break; ... default: ...}
+	> for -> like in C++. Other form: for(var x in object/array) {}
+	> while/do while => C++-like
+	> break: like in C++
+	

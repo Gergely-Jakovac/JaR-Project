@@ -1,0 +1,78 @@
+{
+    "physics" :
+    {
+	"name": "Physics", "parent": "-",
+	"children": ["mechanics", "eldyn", "statphys"],
+	"path": "physics"
+    },
+
+    "mathematics":
+    {
+	"name": "Mathematics", "parent": "-",
+	"children": ["algebra", "discrete_maths", "analysis"],
+	"path": "mathematics"
+    },
+
+    "algebra":
+    {
+	"name": "Algebra", "parent": "mathematics",
+	"children": [],
+	"path": "mathematics"
+    },
+
+     "discrete_maths":
+    {
+	"name": "Discrete Mathematics", "parent": "mathematics",
+	"children": [],
+	"path": "mathematics"
+    },
+
+     "analysis":
+    {
+	"name": "Analysis", "parent": "mathematics",
+	"children": [],
+	"path": "mathematics"
+    },
+    
+    "mechanics":
+    {
+	"name": "Mechanics", "parent": "physics",
+	"children": [],
+	"path": "physics"
+    },
+
+    "eldyn":
+    {
+	"name": "Electrodynamics", "parent": "physics",
+	"children": [],
+	"path": "physics"
+    },
+
+    "statphys":
+    {
+	"name": "Statistical Physics", "parent": "physics",
+	"children": ["chaos_theory", "lattice_models", "thermodynamics"],
+	"path": "physics"
+    },
+
+    "chaos_theory":
+    {
+	"name": "Chaos Theory", "parent": "statphys",
+	"children": [],
+	"path": "physics/statphys"
+    },
+
+    "lattice_models":
+    {
+	"name": "Lattice Models", "parent": "statphys",
+	"children": [],
+	"path": "physics/statphys"
+    },
+
+    "thermodynamics":
+    {
+	"name": "Thermodynamics", "parent": "statphys",
+	"children": [],
+	"path": "physics/statphys"
+    }    
+}

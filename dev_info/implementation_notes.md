@@ -23,3 +23,11 @@
   * At first, we should set up the page on our computer. [Posible problems](https://www.website.com/beginnerguide/webhosting/6/7/can-i-host-my-website-on-my-personal-computer?.ws). [Apache](https://httpd.apache.org/).[Ubuntu tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04).
   * [Domain registration info](https://www.thesitewizard.com/archive/registerdomain.shtml). Basicly everything that we need is listed here. The most used [domain name-registrar.](https://uk.godaddy.com/)
   * [Tips on domain name choosing](https://www.thesitewizard.com/archive/domainname.shtml), 
+
+* Notes on how to handle an account:
+  * [Google login](https://developers.google.com/identity/sign-in/web/sign-in) tutorial.
+    - [another](https://developers.google.com/identity/sign-in/web) google login tutorial.
+  * css [login tutorial](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal).
+  * css [sihn up form tutorial](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form).
+  * a [note](https://security.blogoverflow.com/2013/09/about-secure-password-hashing/) on password hashing.
+  * a [javascript implementation](https://github.com/ricmoo/scrypt-js) of the scrypt hashing algorithm. And [here](https://github.com/tonyg/js-scrypt) is another one. [Here](https://blog.filippo.io/the-scrypt-parameters/) is a discussion of scyrpt parameters.

@@ -23,6 +23,7 @@
   * At first, we should set up the page on our computer. [Posible problems](https://www.website.com/beginnerguide/webhosting/6/7/can-i-host-my-website-on-my-personal-computer?.ws). [Apache](https://httpd.apache.org/).[Ubuntu tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04).
   * [Domain registration info](https://www.thesitewizard.com/archive/registerdomain.shtml). Basicly everything that we need is listed here. The most used [domain name-registrar.](https://uk.godaddy.com/)
   * [Tips on domain name choosing](https://www.thesitewizard.com/archive/domainname.shtml), 
+  * The most popular [hosting](https://www.bluehost.com/) site. Hosting for about 10 euros/month, 1 year free domain name (domain name prices depend on the domain suffix; for .com sites the price is about 10 euros/year).
 
 * Notes on how to handle an account:
   * [Google login](https://developers.google.com/identity/sign-in/web/sign-in) tutorial.

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>403 Forbidden</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+      @font-face {
+	  font-family: latinMonoCaps;
+	  src: url(/fonts/lmmonocaps10-regular.otf);
+      }
+
+      a {
+	  outline: 0;
+      }
+      
+      body {
+	  text-align: center;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  border-radius: 20%;
+      }
+
+      .container {
+	  margin-top: 4%;
+	  display: flex;
+	  align-self: center;
+	  padding: 5% 5% 5% 5%;
+	  border: 3px solid orange;
+	  flex-direction: column;
+	  align-items: center;
+	  border-radius: 20%;
+      }
+      
+      .oops {
+	  font-family: latinMonoRegular;
+	  font-size: 250px;
+
+	  /*margin-top: 50px;
+	  /*text-shadow: -3px 0 orange, 0 3px orange, 3px 0 orange, 0 -3px orange;*/
+	  font-weight: 600;
+      }
+
+      .message {
+	  /*margin-bottom: 30px;/**/
+	  font-size: 80px;
+      }
+
+      .link2 {
+	  flex-grow: 0;
+	  font-family: latinMonoCaps;
+	  color: #3e3e3e;
+	  position: relative;
+	  /*padding: 2.5rem 7.5rem;*/
+	  padding: 20px 40px;
+	  border-radius: 35px;
+	  text-decoration: none;
+	  font-size: 30px;
+	  top: 60px;
+	  transition: all .3s ease-in-out;
+	  border: 3px solid #805300;
+	  background-color: orange;
+	  /*background-image: linear-gradient(#ffc14d, orange, #cc8500);*/
+      }
+
+      .link2:hover {
+	  color: orange;/**/
+	  background-color: #3e3e3e;
+	  border: 3px solid black;
+      }
+
+      @media screen and (max-width: 1200px) 
+      {
+	  .oops {
+	      font-size: 170px;
+	      margin-top: 40px;
+	  }
+
+	  .message {
+	      font-size: 50px;
+	  }
+      }
+
+      @media screen and (max-width: 850px) 
+      {
+	  .oops {
+	      font-size: 120px;
+	      margin-top: 30px;
+	  }
+	  
+	  .message {
+	      font-size: 40px;
+	  }
+      }
+      
+    </style>
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="oops">OOPS!</div>
+      <div class="message"> 403 - Forbidden </div>
+      <p id="extended_message"></p>
+      
+      <a href="#" class="link2" onclick="home()"> Homepage </a>
+    </div>
+    
+    <script>
+      function home() {
+	  window.location.assign("http://" + window.location.hostname + ":" +
+				 window.location.port);
+      }
+
+      document.getElementById("extended_message").innerHTML = "You don't have "
+    + "permission to access " + window.location.pathname + " on this server.";
+      
+    </script>
+    
+  </body>
+</html>

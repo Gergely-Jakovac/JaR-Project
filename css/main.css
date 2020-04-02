@@ -1,24 +1,24 @@
 /* Main CSS used to import the specialized designs */
 
 
-@import url("topbar_design.css");
-@import url("sidebar_design.css");
-@import url("main_column_design.css");
-@import url("footer_design.css");
+@import url("/css/topbar_design.css");
+@import url("/css/sidebar_design.css");
+@import url("/css/main_column_design.css");
+@import url("/css/footer_design.css");
 
 @font-face {
     font-family: myFirstFont;
-    src: url(../fonts/diagoth.ttf);
+    src: url(/fonts/diagoth.ttf);
 }
 
 @font-face {
     font-family: latinMonoRomanRegular;
-    src: url(../fonts/lmroman17-regular.otf);
+    src: url(/fonts/lmroman17-regular.otf);
 }
 
 @font-face {
     font-family: latinMonoCaps;
-    src: url(../fonts/lmmonocaps10-regular.otf);
+    src: url(/fonts/lmmonocaps10-regular.otf);
 }
 
 @media screen and (max-width: 600px) {

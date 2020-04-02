@@ -96,7 +96,7 @@ div.dropdown {
     border-radius: 8px;
     border-width: 1px;
 
-    background: url(../paperTexture.jpg);
+    background: url(/temp/paperTexture.jpg);
     background-repeat: repeat-y;
     background-size: cover;
 }

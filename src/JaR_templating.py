@@ -2,6 +2,12 @@ import sys
 import mimetypes
 import os.path
 
+# modifying path at runtime to be see our imports:
+sys.path.insert(1, '/home/jakovac/Desktop/Családi Cég/Adaptive-Version-Tracking-System/')
+
+from AVTS import *
+from raw_environment import *
+
 def fileOrDirExists(path):
     if os.path.exists(path): # if it is a file:
         return True
@@ -14,9 +20,19 @@ def isBinary(path):
             "otf", "ttf"} #...
     return ext.lower() in bins
 
-def openHTMLTemplate(path):
-    with open(path, 'r') as file:
-        data = file.read()
+
+# HTML templates are .html files, that are interpreted with the AVTS templating language
+def openHTMLTemplate(template_path):
+    elems = []
+    stream = lambda line: elems.append(line)
+    endl = lambda: elems.append("\n")
+    begl = lambda: None
+    environment = RawEnvironment(stream, begl, endl)
+    f = open(template_path)
+    avts = AVTS(environment, f)
+    avts.handle()
+    f.close()
+    data = "".join(elems)
     return data
 
 def openRawFile(path):
@@ -33,6 +49,18 @@ def handleFileRequest(path, params):
     except (FileNotFoundError, IsADirectoryError): #as e:
         return ( b'', "", 404) # file was not found
 
+#!!! duplicate code:
 def generateErrorHTML(error_code, template_path):
-    return bytes(openHTMLTemplate(template_path) , encoding="utf-8")
+    elems = []
+    stream = lambda line: elems.append(line)
+    endl = lambda: elems.append("\n")
+    begl = lambda: None
+    environment = RawEnvironment(stream, begl, endl)
+    f = open(template_path)
+    avts = AVTS(environment, f)
+    avts.setVariable('error_code', error_code)
+    avts.handle()
+    f.close()
+    data = "".join(elems)
+    return bytes(data, encoding="utf-8")
 

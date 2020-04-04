@@ -13,13 +13,14 @@ def isAllowed(path, prepath):
         return (False, 404)
     # allowed directories:
     allow = {"templates", "img", "css", "temp", "js", "fonts"} # temp=temporary
-    if p[1] not in allow: # if the file is not in the allowed folders:
-        # if there is such a file, but it is forbidden:
-        if JaR_templating.fileOrDirExists(prepath + path):
-            return (False, 403)
-        else: # if there is no such file:
-            return (False, 404)
-    return (True, 200)
+    if JaR_templating.fileOrDirExists(prepath + path): # if the file exists:
+        if p[1] in allow:
+            return (True, 200) # file exists and is not forbidden
+    else: # if there is no such file:
+        return (False, 404)
+    # if the file is not in the allowed folders (but exists):
+    return (False, 403)
+
 
 # Do PARAMS NEED SEC CHECKING???
 

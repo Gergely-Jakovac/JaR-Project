@@ -1,7 +1,6 @@
 import http.server
 import socketserver
 import sys
-import json
 
 #---------------------------------------
 # imports
@@ -13,7 +12,8 @@ PORT = 15400
     
 class MySimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
     mainDirectoryPath = "/home/jakovac/Desktop/Családi Cég/JaR-Project"
-
+    logFile = "/home/jakovac/Desktop/Családi Cég/JaR-Project/serverlog.txt"
+    
     def writeHeader(self, mimetype, response_code):
         self.send_response(response_code, "ok")
         self.send_header('Access-Control-Allow-Origin', '*')
@@ -34,7 +34,11 @@ class MySimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             JaR_templating.generateErrorHTML(error_code, self.mainDirectoryPath
                                              + "/templates/error.html")
         )
-        
+
+    #def log_message(self, form, *args):
+    #    print(form.format(args))
+    #    with open(log_file) as f:
+            
 
     # Problem: sends 403 error even if the request was only a typo
     def processInput(self):
@@ -44,7 +48,7 @@ class MySimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         query_list[0] = JaR_routing.getFilePathEnding(query_list[0]);
         print("PATH =", query_list[0])
         # security checking of the input html:
-        allow = JaR_routing.isAllowed(query_list[0], self.mainDirectoryPath) 
+        allow = JaR_routing.isAllowed(query_list[0], self.mainDirectoryPath)
         if allow[0] == False:
             self.sendErrorResponse(allow[1])
             # Error happened during the path analysis. Possible errors:
